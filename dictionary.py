@@ -1,26 +1,69 @@
-#sets
-numbers = [10,20,30,40,50,60,70,80]
+#dictionary is a collection of key value pairs that is unordered and mutuable
 
-print(numbers[::-2])
-print(numbers[::-3])
-print(numbers[::-4])
+std = {"name":"sanjay" , "marks":99 , "subject":"fitness"}
 
-
-#example
-numbers = [10,20,30,40,50,60,70,80]
-print(numbers[1:7:2])
-print(numbers[6:1:-2])
-
- #time calculator
-total_minutes = int(input("Enter total minutes: "))
-
-hours = total_minutes // 60
-minutes = total_minutes % 60
-seconds = total_minutes % 60
-
-print("Hours:", hours)
-print("Minutes:", minutes)
-print("Seconds:", seconds)
+print(std.keys())
+print(std.values())
+print(std.items())
 
 
-# 
+#access elements in dic
+{"name":"sanjay" , "marks":99 , "subject":"fitness"}
+
+print(std["name"])
+print(std["marks"])
+print(std["subject"])
+
+#change values in a dictionary
+std["marks"] = 11
+
+print(std["marks"])
+
+#add new data to a dictionary
+std["city"] = "vijayawada"
+
+print(std) 
+
+#remove data
+std.pop("marks")
+
+print(std)
+
+print(std.get("name"))
+#get() returns the value of the specified key
+
+std.update({"age": 17})
+#update() updates the value of the specified key
+
+print(std)
+
+std.pop("age")
+#pop() removes the specified key and its value
+
+print(std)
+
+#popitem() removes the last inserted key-value pair
+student ={"name" : "sanjay","age":17,"course" : "python"}
+
+student.popitem()
+print(student)
+
+#set default
+
+student = {"name" : "sanjay"}
+
+student.setdefault("age",17)
+print(student)
+
+#clear method
+
+student.clear()
+print(student)
+
+#copy method
+
+student = {"name":"sanjay","age":17}
+
+new_student = student.copy()
+
+print(new_student)
