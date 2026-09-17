@@ -67,3 +67,8 @@ student = {"name":"sanjay","age":17}
 new_student = student.copy()
 
 print(new_student)
+
+#order of evaluation
+
+result = (10+5)*2
+print(result)
